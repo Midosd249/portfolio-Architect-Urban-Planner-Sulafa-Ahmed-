@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلافة أحمد - مهندسة معمارية ومخططة حضرية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .lang-switch:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(44, 62, 80, 0.2));
+            z-index: -1;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .header-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .header-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .header-visual {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .architectural-element {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .architectural-element::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            transform: rotate(45deg);
+        }
+        
+        .architectural-element::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transform: rotate(45deg);
+        }
+        
+        .architectural-icon {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            position: relative;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-visual {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .about-design {
+            width: 350px;
+            height: 350px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .design-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .design-circle:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+        
+        .design-circle:nth-child(2) {
+            width: 80%;
+            height: 80%;
+            opacity: 0.15;
+        }
+        
+        .design-circle:nth-child(3) {
+            width: 60%;
+            height: 60%;
+            opacity: 0.2;
+        }
+        
+        .design-icon {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            z-index: 1;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .about-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.05), rgba(44, 62, 80, 0.08));
+            z-index: 1;
+        }
+        
+        .about-name {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(44, 62, 80, 0.05);
+            z-index: 1;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .edu-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .edu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .edu-card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+        }
+        
+        .edu-card-body {
+            padding: 20px;
+        }
+        
+        .edu-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .edu-card p {
+            margin-bottom: 10px;
+        }
+        
+        .edu-card .year {
+            display: inline-block;
+            background: var(--light-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            width: calc(33.333% - 20px);
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Portfolio Section */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .portfolio-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-content {
+            padding: 20px;
+        }
+        
+        .portfolio-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .portfolio-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-content .project-year {
+            display: inline-block;
+            background: var(--light-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--secondary-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .right::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .timeline-content .timeline-date {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo p {
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        
+        .footer-links ul li a:hover {
+            opacity: 1;
+            padding-right: 5px;
+        }
+        
+        .footer-social {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-social h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.8;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .skill-card {
+                width: calc(50% - 20px);
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .header-text h1 {
+                font-size: 2rem;
+            }
+            
+            .skill-card {
+                width: 100%;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* English Styles */
+        body[dir="ltr"] {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body[dir="ltr"] .header-content {
+            flex-direction: row-reverse;
+        }
+        
+        body[dir="ltr"] .about-content {
+            flex-direction: row-reverse;
+        }
+        
+        body[dir="ltr"] .contact-item {
+            flex-direction: row-reverse;
+        }
+        
+        body[dir="ltr"] .contact-icon {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+        
+        body[dir="ltr"] .timeline::after {
+            left: 31px;
+        }
+        
+        body[dir="ltr"] .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        body[dir="ltr"] .timeline-item::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        body[dir="ltr"] .left::after, 
+        body[dir="ltr"] .right::after {
+            left: 21px;
+        }
+        
+        body[dir="ltr"] .right {
+            left: 0%;
+        }
+        
+        body[dir="ltr"] .lang-switch {
+            right: auto;
+            left: 20px;
+        }
+        
+        body[dir="ltr"] .footer-links ul li a:hover {
+            padding-right: 0;
+            padding-left: 5px;
+        }
+        
+        body[dir="ltr"] .about-name {
+            right: auto;
+            left: 30px;
+            writing-mode: vertical-lr;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: var(--primary-color);
+        }
+        
+        .modal-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .modal-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .modal-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .modal-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .modal-details h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .modal-details p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .modal-details .project-info {
+            margin-bottom: 10px;
+        }
+        
+        .modal-details .project-info strong {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-switch" onclick="toggleLanguage()">English</button>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content fade-in-up">
+                <div class="header-text">
+                    <h1 data-ar="سلافة أحمد محمد إبراهيم" data-en="Sulafa Ahmed Mohamed Ibrahim">سلافة أحمد محمد إبراهيم</h1>
+                    <p data-ar="مهندسة معمارية ومخططة حضرية" data-en="Architect & Urban Planner">مهندسة معمارية ومخططة حضرية</p>
+                    <a href="#contact" class="btn" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</a>
+                </div>
+                <div class="header-visual">
+                    <div class="architectural-element">
+                        <i class="fas fa-drafting-compass architectural-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo" data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</div>
+            <ul class="nav-links">
+                <li><a href="#about" data-ar="من أنا" data-en="About">من أنا</a></li>
+                <li><a href="#education" data-ar="التعليم" data-en="Education">التعليم</a></li>
+                <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li>
+                <li><a href="#portfolio" data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</a></li>
+                <li><a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a></li>
+                <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-bg"></div>
+        <div class="about-name" data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</div>
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2 data-ar="من أنا" data-en="About Me">من أنا</h2>
+                <p data-ar="مهندسة معمارية ومخططة حضرية بخبرة تزيد عن 13 عامًا في تصميم وتخطيط المشاريع المعمارية والحضرية" data-en="An architect and urban planner with over 13 years of experience in architectural and urban design and planning">مهندسة معمارية ومخططة حضرية بخبرة تزيد عن 13 عامًا في تصميم وتخطيط المشاريع المعمارية والحضرية</p>
+            </div>
+            <div class="about-content fade-in-up">
+                <div class="about-text">
+                    <p data-ar="أنا مهندسة معمارية ومخططة حضرية متخصصة في تقديم حلول مستدامة ووظيفية ومرتبطة بالثقافة عبر تطوير السياحة، وتقييم المباني، ودراسات الجدوى، والتصميم الشامل. أدمج مفاهيم قائمة على الهوية مع التكنولوجيا الحديثة لخلق مساحات آمنة وفعالة وملهمة." data-en="I am an architect and urban planner specializing in delivering sustainable, functional, and culturally grounded solutions across tourism development, building evaluations, feasibility studies, and comprehensive design. I integrate identity-driven concepts with modern technology to create spaces that are safe, efficient, and inspiring.">أنا مهندسة معمارية ومخططة حضرية متخصصة في تقديم حلول مستدامة ووظيفية ومرتبطة بالثقافة عبر تطوير السياحة، وتقييم المباني، ودراسات الجدوى، والتصميم الشامل. أدمج مفاهيم قائمة على الهوية مع التكنولوجيا الحديثة لخلق مساحات آمنة وفعالة وملهمة.</p>
+                    <p data-ar="الهندسة المعمارية هي انعكاس للهوية. نهجي يجمع بين الجمال والوظيفة في بيئات آمنة ومستدامة، موازنة بين التراث الثقافي والابتكار الحديث لتشكيل مدن الغد." data-en="Architecture is a reflection of identity. My approach combines beauty and function in safe, sustainable environments, balancing cultural heritage with modern innovation to shape tomorrow's cities.">الهندسة المعمارية هي انعكاس للهوية. نهجي يجمع بين الجمال والوظيفة في بيئات آمنة ومستدامة، موازنة بين التراث الثقافي والابتكار الحديث لتشكيل مدن الغد.</p>
+                    <a href="#portfolio" class="btn" data-ar="استكشف أعمالي" data-en="Explore My Work">استكشف أعمالي</a>
+                </div>
+                <div class="about-visual">
+                    <div class="about-design">
+                        <div class="design-circle"></div>
+                        <div class="design-circle"></div>
+                        <div class="design-circle"></div>
+                        <i class="fas fa-building design-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" style="background-color: #f0f2f5;">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2 data-ar="التعليم" data-en="Education">التعليم</h2>
+                <p data-ar="المؤهلات الأكاديمية والشهادات المهنية" data-en="Academic qualifications and professional certifications">المؤهلات الأكاديمية والشهادات المهنية</p>
+            </div>
+            <div class="education-grid fade-in-up">
+                <div class="edu-card">
+                    <div class="edu-card-header">
+                        <h3 data-ar="ماجستير في التخطيط الحضري" data-en="Master of Science in Urban Planning">ماجستير في التخطيط الحضري</h3>
+                    </div>
+                    <div class="edu-card-body">
+                        <p data-ar="جامعة الزعيم الأزهري" data-en="Alzaim Al-Azhari University">جامعة الزعيم الأزهري</p>
+                        <p data-ar="دراسات متقدمة في استراتيجيات التطور الحضري ومبادئ التصميم المستدام وحلول معمارية مبتكرة" data-en="Advanced studies in urban development strategies, sustainable design principles, and innovative architectural solutions">دراسات متقدمة في استراتيجيات التطور الحضري ومبادئ التصميم المستدام وحلول معمارية مبتكرة</p>
+                        <span class="year">2017</span>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-card-header">
+                        <h3 data-ar="بكالوريوس في الهندسة المعمارية والتخطيط" data-en="Bachelor of Architecture and Planning">بكالوريوس في الهندسة المعمارية والتخطيط</h3>
+                    </div>
+                    <div class="edu-card-body">
+                        <p data-ar="جامعة أم درمان الإسلامية" data-en="Omdurman Islamic University">جامعة أم درمان الإسلامية</p>
+                        <p data-ar="تعليم شامل في التصميم المعماري وتكنولوجيا البناء وأساسيات التخطيط الحضري" data-en="Comprehensive education in architectural design, building technology, and urban planning fundamentals">تعليم شامل في التصميم المعماري وتكنولوجيا البناء وأساسيات التخطيط الحضري</p>
+                        <span class="year">2008</span>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-card-header">
+                        <h3 data-ar="شهادات مهنية" data-en="Professional Certifications">شهادات مهنية</h3>
+                    </div>
+                    <div class="edu-card-body">
+                        <p data-ar="مهندسة متخصصة مسجلة - مجلس الهندسة السوداني (2022)" data-en="Registered Specialized Engineer – Sudanese Engineering Council (2022)">مهندسة متخصصة مسجلة - مجلس الهندسة السوداني (2022)</p>
+                        <p data-ar="عضو كامل - معهد المهندسين المعماريين السوداني (2022)" data-en="Full Member – Sudanese Institute of Architects (2022)">عضو كامل - معهد المهندسين المعماريين السوداني (2022)</p>
+                        <p data-ar="دبلوم في التصميم الداخلي - شركة MN للديكور (2022-2023)" data-en="Diploma in Interior Design – MN Decoration Company (2022–2023)">دبلوم في التصميم الداخلي - شركة MN للديكور (2022-2023)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2 data-ar="المهارات" data-en="Skills">المهارات</h2>
+                <p data-ar="الخبرات التقنية والتصميمية والإبداعية" data-en="Technical, design, and creative expertise">الخبرات التقنية والتصميمية والإبداعية</p>
+            </div>
+            <div class="skills-container fade-in-up">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3 data-ar="التصميم المعماري" data-en="Architectural Design">التصميم المعماري</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 data-ar="التخطيط الحضري" data-en="Urban Planning">التخطيط الحضري</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-ar="تقييم المشاريع" data-en="Project Evaluation">تقييم المشاريع</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3 data-ar="تطوير السياحة" data-en="Tourism Development">تطوير السياحة</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 data-ar="تحليل المباني" data-en="Building Analysis">تحليل المباني</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 data-ar="دراسات الجدوى" data-en="Feasibility Studies">دراسات الجدوى</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3 data-ar="التصميم الداخلي" data-en="Interior Design">التصميم الداخلي</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3 data-ar="تصميم المناظر الطبيعية" data-en="Landscape Design">تصميم المناظر الطبيعية</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-ar="الرسم الحر والخط" data-en="Freehand Drawing & Calligraphy">الرسم الحر والخط</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" style="background-color: #f0f2f5;">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2 data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</h2>
+                <p data-ar="نماذج من المشاريع التي شاركت في تصميمها وتخطيطها" data-en="Samples of projects I participated in designing and planning">نماذج من المشاريع التي شاركت في تصميمها وتخطيطها</p>
+            </div>
+            <div class="portfolio-filter fade-in-up">
+                <button class="filter-btn active" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
+                <button class="filter-btn" data-filter="tourism" data-ar="سياحة" data-en="Tourism">سياحة</button>
+                <button class="filter-btn" data-filter="residential" data-ar="سكني" data-en="Residential">سكني</button>
+                <button class="filter-btn" data-filter="commercial" data-ar="تجاري" data-en="Commercial">تجاري</button>
+                <button class="filter-btn" data-filter="cultural" data-ar="ثقافي" data-en="Cultural">ثقافي</button>
+            </div>
+            <div class="portfolio-grid fade-in-up">
+                <div class="portfolio-item" data-category="tourism">
+                    <div class="portfolio-image">
+                        <img src="https://z-cdn-media.chatglm.cn/files/7fe22258-4a14-4181-9f28-adc389493294_Tourist%20Resort%20-%20Dinder.jpeg?auth_key=1791921382-fda745c301e24f0da60a12a3723517c3-0-04d1173e36b891c94c791b50a08f1344" alt="Tourist Resort - Dinder">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-ar="منتجع سياحي - دندر، السودان" data-en="Tourist Resort - Dinder, Sudan">منتجع سياحي - دندر، السودان</h3>
+                        <p data-ar="منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة" data-en="A futuristic resort blending technology, culture, and nature to create a unique tourist experience">منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة</p>
+                        <span class="project-year">2019</span>
+                        <button class="view-project btn" data-project="dinder" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551" alt="Silver Plaza - Commercial Mall">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-ar="سيلفر بلازا - مركز تجاري، الخرطوم" data-en="Silver Plaza - Commercial Mall, Khartoum">سيلفر بلازا - مركز تجاري، الخرطوم</h3>
+                        <p data-ar="مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة" data-en="A contemporary commercial hub designed to merge retail, leisure, and community spaces into one vibrant destination">مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة</p>
+                        <span class="project-year">2021</span>
+                        <button class="view-project btn" data-project="silver-plaza" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://z-cdn-media.chatglm.cn/files/72dbed36-81da-4f0b-a38d-1748fff29f05_Modern%20Residential%20Building.jpeg?auth_key=1791921382-17c9b3d2a14f4475b762d7ae11cf06eb-0-a46938fa6909b02f96ff5c131d0221cf" alt="Modern Residential Building">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-ar="مبنى سكني حديث - الخرطوم، الأزهري" data-en="Modern Residential Building - Khartoum, Al-Azhari">مبنى سكني حديث - الخرطوم، الأزهري</h3>
+                        <p data-ar="مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط" data-en="A modern residential complex designed to balance privacy, comfort, and natural light within a compact urban plot">مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط</p>
+                        <span class="project-year">2020</span>
+                        <button class="view-project btn" data-project="residential" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cultural">
+                    <div class="portfolio-image">
+                        <img src="https://z-cdn-media.chatglm.cn/files/131b92b6-9c14-413f-812c-adb46ce666c1_Museum%20-%20Karima.jpg?auth_key=1791921382-2af2e7a1434e46feb7ab3e0cf029667b-0-eba29477aaa82abe2dabfbad4c6e6d79" alt="Museum - Karima">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-ar="متحف - كريمة" data-en="Museum - Karima">متحف - كريمة</h3>
+                        <p data-ar="معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة" data-en="A cultural landmark celebrating the North Nile Valley Civilization, merging heritage with contemporary architecture">معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة</p>
+                        <span class="project-year">2020</span>
+                        <button class="view-project btn" data-project="museum" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cultural">
+                    <div class="portfolio-image">
+                        <img src="https://z-cdn-media.chatglm.cn/files/c273891e-633e-4434-850e-c80f54dfd0ac_European%20Czech%20Club.jpeg?auth_key=1791921382-eafea5b66da1441086528bc4ebccedec-0-bf13b32c612e4e276edbb9bb9a6e0eab" alt="European Czech Club">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-ar="نادي التشيكي الأوروبي - الخرطوم" data-en="European Czech Club - Khartoum">نادي التشيكي الأوروبي - الخرطوم</h3>
+                        <p data-ar="خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية" data-en="A conceptual masterplan for a cultural and recreational club, designed to integrate sports, leisure, and community facilities within a landscaped environment">خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية</p>
+                        <span class="project-year">2019</span>
+                        <button class="view-project btn" data-project="czech-club" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2 data-ar="الخبرة المهنية" data-en="Professional Experience">الخبرة المهنية</h2>
+                <p data-ar="رحلتي المهنية في مجال الهندسة المعمارية والتخطيط الحضري" data-en="My professional journey in architecture and urban planning">رحلتي المهنية في مجال الهندسة المعمارية والتخطيط الحضري</p>
+            </div>
+            <div class="timeline fade-in-up">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 data-ar="مهندسة معمارية" data-en="Architect">مهندسة معمارية</h3>
+                        <span class="timeline-date">2009 - الآن</span>
+                        <h4 data-ar="شركة المرسلات الهندسية" data-en="Elmursalat Engineering Consultancy">شركة المرسلات الهندسية</h4>
+                        <p data-ar="مشاركة في فريق متخصص لتنفيذ مشاريع معمارية وحضرية شاملة عبر قطاعات متعددة. المساهمة في تطوير السياحة، وتقييم المباني، وحلول التصميم. المشاركة في إجراء دراسات الجدوى للمشاريع الهندسية والصناعية والزراعية والصحية والتعليمية والسياحية والترفيهية. المساعدة في تقييم أصول المصانع والمباني والأراضي." data-en="Participated in a specialized team to implement comprehensive architectural and urban projects across multiple sectors. Contributed to tourism development, building evaluations, and design solutions. Assisted in conducting feasibility studies for engineering, industrial, agricultural, health, educational, tourism, and entertainment projects. Helped evaluate fixed assets of factories, buildings, and lands.">مشاركة في فريق متخصص لتنفيذ مشاريع معمارية وحضرية شاملة عبر قطاعات متعددة. المساهمة في تطوير السياحة، وتقييم المباني، وحلول التصميم. المشاركة في إجراء دراسات الجدوى للمشاريع الهندسية والصناعية والزراعية والصحية والتعليمية والسياحية والترفيهية. المساعدة في تقييم أصول المصانع والمباني والأراضي.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 data-ar="تدريب وخبرة مبكرة" data-en="Training & Early Experience">تدريب وخبرة مبكرة</h3>
+                        <span class="timeline-date">2008</span>
+                        <h4 data-ar="شركة الإتقان الهندسية، السودان" data-en="Al-Itqan Engineering Company, Sudan">شركة الإتقان الهندسية، السودان</h4>
+                        <p data-ar="تدريب لمدة 3 أشهر في شركة الإتقان الهندسية. منصب لمدة 6 أشهر كمهندسة متعاونة تشرف على موقع مصنع إكسسوارات زي الشرطة." data-en="3-month training at Al-Itqan Engineering Company, Sudan. 6-month position as cooperating engineer supervising Police Uniform Accessories Factory site.">تدريب لمدة 3 أشهر في شركة الإتقان الهندسية. منصب لمدة 6 أشهر كمهندسة متعاونة تشرف على موقع مصنع إكسسوارات زي الشرطة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #f0f2f5;">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2 data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
+                <p data-ar="للتعاون والاستفسارات، لا تتردد في التواصل معي" data-en="For collaboration and inquiries, feel free to contact me">للتعاون والاستفسارات، لا تتردد في التواصل معي</p>
+            </div>
+            <div class="contact-content fade-in-up">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-ar="الهاتف" data-en="Phone">الهاتف</h4>
+                            <p dir="ltr">+249 901 161 157</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-ar="هاتف آخر" data-en="Another Phone">هاتف آخر</h4>
+                            <p dir="ltr">+966 595 214 352</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h4>
+                            <p>SULAFAFADUL2022@GMAIL.COM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-ar="العنوان" data-en="Address">العنوان</h4>
+                            <p data-ar="الخرطوم، السودان" data-en="Khartoum, Sudan">الخرطوم، السودان</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-ar="الاسم" data-en="Name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-ar="الرسالة" data-en="Message">الرسالة</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-ar="إرسال" data-en="Send">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</h3>
+                    <p data-ar="مهندسة معمارية ومخططة حضرية" data-en="Architect & Urban Planner">مهندسة معمارية ومخططة حضرية</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#about" data-ar="من أنا" data-en="About">من أنا</a></li>
+                        <li><a href="#education" data-ar="التعليم" data-en="Education">التعليم</a></li>
+                        <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li>
+                        <li><a href="#portfolio" data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</a></li>
+                        <li><a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a></li>
+                        <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-ar="تابعني" data-en="Follow Me">تابعني</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-ar="جميع الحقوق محفوظة © 2023 سلافة أحمد" data-en="All Rights Reserved © 2023 Sulafa Ahmed">جميع الحقوق محفوظة © 2023 سلافة أحمد</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Project Image">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modalTitle"></h3>
+                    <div id="modalDescription"></div>
+                    <div id="modalInfo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Language Toggle
+        let currentLang = 'ar';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update language switch button
+            document.querySelector('.lang-switch').textContent = currentLang === 'ar' ? 'English' : 'العربية';
+            
+            // Update all elements with data-ar and data-en attributes
+            document.querySelectorAll('[data-ar][data-en]').forEach(element => {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = element.getAttribute(`data-${currentLang}`);
+                } else {
+                    element.textContent = element.getAttribute(`data-${currentLang}`);
+                }
+            });
+            
+            // Update font family
+            if (currentLang === 'en') {
+                document.body.style.fontFamily = "'Montserrat', sans-serif";
+            } else {
+                document.body.style.fontFamily = "'Tajawal', sans-serif";
+            }
+        }
+        
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Portfolio Filter
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Filter portfolio items
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Project Modal
+        const modal = document.getElementById('projectModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalInfo = document.getElementById('modalInfo');
+        
+        // Project details
+        const projectDetails = {
+            'dinder': {
+                'ar': {
+                    title: 'منتجع سياحي - دندر، السودان',
+                    description: 'منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة. تم تصميم المنتجع ليتناغم مع منظر نهر دندر الطبيعي، ويمزج بين العمارة المعاصرة والبيئة المحيطة.',
+                    info: `
+                        <div class="project-info"><strong>المساحة الإجمالية:</strong> 65,000 م²</div>
+                        <div class="project-info"><strong>المساحة المبنية:</strong> 12,500 م²</div>
+                        <div class="project-info"><strong>الطوابق:</strong> أرضي + 2</div>
+                        <div class="project-info"><strong>السعة:</strong> 250 ضيفًا</div>
+                        <div class="project-info"><strong>السنة:</strong> 2019</div>
+                        <div class="project-info"><strong>المميزات:</strong> فنادق ومنتجعات ذات إطلالات على النهر، مطاعم ومقاهي بتجارب متنوعة، مرافق ترفيهية رياضية وعافية وترفيهية، مسارات طبيعية متكاملة مع منظر دندر الطبيعي، مراكز ثقافية لفعاليات التراث والمجتمع.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/7fe22258-4a14-4181-9f28-adc389493294_Tourist%20Resort%20-%20Dinder.jpeg?auth_key=1791921382-fda745c301e24f0da60a12a3723517c3-0-04d1173e36b891c94c791b50a08f1344'
+                },
+                'en': {
+                    title: 'Tourist Resort - Dinder, Sudan',
+                    description: 'A futuristic resort blending technology, culture, and nature to create a unique tourist experience. The resort is designed to harmonize with the Dinder River landscape, blending contemporary architecture with natural surroundings.',
+                    info: `
+                        <div class="project-info"><strong>Site Area:</strong> 65,000 m²</div>
+                        <div class="project-info"><strong>Built-up Area:</strong> 12,500 m²</div>
+                        <div class="project-info"><strong>Floors:</strong> G + 2</div>
+                        <div class="project-info"><strong>Capacity:</strong> 250 guests</div>
+                        <div class="project-info"><strong>Year:</strong> 2019</div>
+                        <div class="project-info"><strong>Features:</strong> Hotels & Lodges – luxury accommodation with river views, Restaurants & Cafes – diverse dining experiences, Recreational Facilities – sports, wellness, and leisure areas, Nature Trails – integrated with the Dinder landscape, Cultural Centers – spaces for heritage and community events.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/7fe22258-4a14-4181-9f28-adc389493294_Tourist%20Resort%20-%20Dinder.jpeg?auth_key=1791921382-fda745c301e24f0da60a12a3723517c3-0-04d1173e36b891c94c791b50a08f1344'
+                }
+            },
+            'silver-plaza': {
+                'ar': {
+                    title: 'سيلفر بلازا - مركز تجاري، الخرطوم',
+                    description: 'مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة. تم تصميم سيلفر بلازا ليكون معلمًا تجاريًا حديثًا في الخرطوم، ويقدم مزيجًا ديناميكيًا من التجزئة وتناول الطعام والمرافق الترفيهية.',
+                    info: `
+                        <div class="project-info"><strong>المساحة الإجمالية:</strong> 45,000 م²</div>
+                        <div class="project-info"><strong>المساحة المبنية:</strong> 30,000 م²</div>
+                        <div class="project-info"><strong>الطوابق:</strong> أرضي + 3</div>
+                        <div class="project-info"><strong>السعة:</strong> 150+ وحدة تجزئة</div>
+                        <div class="project-info"><strong>السنة:</strong> 2021</div>
+                        <div class="project-info"><strong>المميزات:</strong> ممر تجاري - تجربة تسوق متنوعة، ساحة طعام ومطاعم - مطابخ محلية ودولية، منطقة ترفيهية - سينما وأنشطة ترفيهية، ساحة عامة - مساحات تجمع مناظر طبيعية، مرافق وقوف سيارات - متكاملة ومتاحة.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551'
+                },
+                'en': {
+                    title: 'Silver Plaza - Commercial Mall, Khartoum',
+                    description: 'A contemporary commercial hub designed to merge retail, leisure, and community spaces into one vibrant destination. Silver Plaza is envisioned as a modern commercial landmark in Khartoum, offering a dynamic mix of retail, dining, and entertainment facilities.',
+                    info: `
+                        <div class="project-info"><strong>Site Area:</strong> 45,000 m²</div>
+                        <div class="project-info"><strong>Built-up Area:</strong> 30,000 m²</div>
+                        <div class="project-info"><strong>Floors:</strong> G + 3</div>
+                        <div class="project-info"><strong>Capacity:</strong> 150+ retail units</div>
+                        <div class="project-info"><strong>Year:</strong> 2021</div>
+                        <div class="project-info"><strong>Features:</strong> Retail Promenade – diverse shopping experience, Food Court & Restaurants – local and international cuisines, Entertainment Zone – cinema and leisure activities, Public Plaza – landscaped gathering spaces, Parking Facilities – integrated and accessible.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551'
+                }
+            },
+            'residential': {
+                'ar': {
+                    title: 'مبنى سكني حديث - الخرطوم، الأزهري',
+                    description: 'مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط. المبنى السكني، الذي يقع على مساحة 400 م²، يتكون من أربعة طوابق مع شقق مخططة بذكاء توازن بين الخصوصية والراحة.',
+                    info: `
+                        <div class="project-info"><strong>مساحة الأرض:</strong> 400 م²</div>
+                        <div class="project-info"><strong>الطوابق:</strong> أرضي + 4</div>
+                        <div class="project-info"><strong>الشقق:</strong> شقتان في الطابق الأرضي + 4 شقق في كل طابق علوي</div>
+                        <div class="project-info"><strong>السنة:</strong> 2020</div>
+                        <div class="project-info"><strong>المميزات:</strong> واجهة حديثة بخطوط نظيفة، تعظيم الإضاءة الطبيعية والتهوية، دوران فعال وتخطيط للشقق، التكامل مع الحي المحيط.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/72dbed36-81da-4f0b-a38d-1748fff29f05_Modern%20Residential%20Building.jpeg?auth_key=1791921382-17c9b3d2a14f4475b762d7ae11cf06eb-0-a46938fa6909b02f96ff5c131d0221cf'
+                },
+                'en': {
+                    title: 'Modern Residential Building - Khartoum, Al-Azhari',
+                    description: 'A modern residential complex designed to balance privacy, comfort, and natural light within a compact urban plot. The residential building, set on a 400 m² plot, consists of four floors with smartly planned apartments that balance privacy and comfort.',
+                    info: `
+                        <div class="project-info"><strong>Land Area:</strong> 400 m²</div>
+                        <div class="project-info"><strong>Floors:</strong> Ground + 4</div>
+                        <div class="project-info"><strong>Apartments:</strong> 2 on ground floor + 4 per upper floor</div>
+                        <div class="project-info"><strong>Year:</strong> 2020</div>
+                        <div class="project-info"><strong>Features:</strong> Modern façade with clean lines, Maximized natural light and ventilation, Efficient circulation and apartment layouts, Integration with the surrounding neighborhood.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/72dbed36-81da-4f0b-a38d-1748fff29f05_Modern%20Residential%20Building.jpeg?auth_key=1791921382-17c9b3d2a14f4475b762d7ae11cf06eb-0-a46938fa6909b02f96ff5c131d0221cf'
+                }
+            },
+            'museum': {
+                'ar': {
+                    title: 'متحف - كريمة',
+                    description: 'معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة. تم تصميم المتحف كمحور ثقافي ضخم، يدمج بين مساحات العرض والساحات العامة والحدود المناظر الطبيعية لتكريم التراث القديم للسودان.',
+                    info: `
+                        <div class="project-info"><strong>المساحة الإجمالية:</strong> 55,000 م²</div>
+                        <div class="project-info"><strong>المساحة المبنية:</strong> 18,000 م²</div>
+                        <div class="project-info"><strong>الطوابق:</strong> أرضي + 1</div>
+                        <div class="project-info"><strong>السعة:</strong> 1,200 زائر/يوم</div>
+                        <div class="project-info"><strong>السنة:</strong> 2020</div>
+                        <div class="project-info"><strong>المميزات:</strong> فناء مثمن مركزي - نواة رمزية مع سقف زجاجي، جسر خشبي - يربط الجناح والمتحف، مسرح خارجي - عروض ثقافية في الهواء الطلق، حدائق مناظر طبيعية - متكاملة مع المسارات، قاعات عرض - سرد ثقافي غامر.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/131b92b6-9c14-413f-812c-adb46ce666c1_Museum%20-%20Karima.jpg?auth_key=1791921382-2af2e7a1434e46feb7ab3e0cf029667b-0-eba29477aaa82abe2dabfbad4c6e6d79'
+                },
+                'en': {
+                    title: 'Museum - Karima',
+                    description: 'A cultural landmark celebrating the North Nile Valley Civilization, merging heritage with contemporary architecture. The museum is designed as a monumental cultural hub, integrating exhibition spaces, public plazas, and landscaped gardens to honor Sudan\'s ancient heritage.',
+                    info: `
+                        <div class="project-info"><strong>Site Area:</strong> 55,000 m²</div>
+                        <div class="project-info"><strong>Built-up Area:</strong> 18,000 m²</div>
+                        <div class="project-info"><strong>Floors:</strong> G + 1</div>
+                        <div class="project-info"><strong>Capacity:</strong> 1,200 visitors/day</div>
+                        <div class="project-info"><strong>Year:</strong> 2020</div>
+                        <div class="project-info"><strong>Features:</strong> Central Octagonal Atrium – symbolic core with skylight, Wooden Bridge – connecting pavilion and museum, Amphitheater – outdoor cultural performances, Landscaped Gardens – integrated with circulation, Exhibition Halls – immersive cultural storytelling.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/131b92b6-9c14-413f-812c-adb46ce666c1_Museum%20-%20Karima.jpg?auth_key=1791921382-2af2e7a1434e46feb7ab3e0cf029667b-0-eba29477aaa82abe2dabfbad4c6e6d79'
+                }
+            },
+            'czech-club': {
+                'ar': {
+                    title: 'نادي التشيكي الأوروبي - الخرطوم',
+                    description: 'خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية. يتم تصور النادي التشيكي الأوروبي كمركز ثقافي وترفيهي في الخرطوم، ويقدم مرافق متنوعة للرياضة والترفيه والمشاركة المجتمعية.',
+                    info: `
+                        <div class="project-info"><strong>المساحة الإجمالية:</strong> 4,700 م²</div>
+                        <div class="project-info"><strong>الموقع:</strong> الخرطوم - بلوك 1</div>
+                        <div class="project-info"><strong>السنة:</strong> 2019</div>
+                        <div class="project-info"><strong>الدور:</strong> تخطيط مفاهيمي ورئيسي</div>
+                        <div class="project-info"><strong>المميزات:</strong> مسبح - منشأة ترفيهية مركزية، ملعب كرة سلة - نشاط رياضي في الهواء الطلق، ساحات مناظر طبيعية - مناطق تجمع مظللة، نافورة دائرية - ميزة مركزية رمزية، مقاعد خارجية - مظلات ومساحات اجتماعية مظللة، نادي - قاعة متعددة الأغراض ثقافية واجتماعية.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/c273891e-633e-4434-850e-c80f54dfd0ac_European%20Czech%20Club.jpeg?auth_key=1791921382-eafea5b66da1441086528bc4ebccedec-0-bf13b32c612e4e276edbb9bb9a6e0eab'
+                },
+                'en': {
+                    title: 'European Czech Club - Khartoum',
+                    description: 'A conceptual masterplan for a cultural and recreational club, designed to integrate sports, leisure, and community facilities within a landscaped environment. The European Czech Club is envisioned as a cultural and recreational hub in Khartoum, offering diverse facilities for sports, leisure, and community engagement.',
+                    info: `
+                        <div class="project-info"><strong>Site Area:</strong> 4,700 m²</div>
+                        <div class="project-info"><strong>Location:</strong> Khartoum – Block 1</div>
+                        <div class="project-info"><strong>Year:</strong> 2019</div>
+                        <div class="project-info"><strong>Role:</strong> Conceptual & Master Planning</div>
+                        <div class="project-info"><strong>Features:</strong> Swimming Pool – central leisure facility, Basketball Court – outdoor sports activity, Landscaped Courtyards – shaded gathering areas, Circular Fountain – symbolic central feature, Outdoor Seating – shaded umbrellas and social spaces, Clubhouse – multipurpose cultural and social hall.</div>
+                    `,
+                    image: 'https://z-cdn-media.chatglm.cn/files/c273891e-633e-4434-850e-c80f54dfd0ac_European%20Czech%20Club.jpeg?auth_key=1791921382-eafea5b66da1441086528bc4ebccedec-0-bf13b32c612e4e276edbb9bb9a6e0eab'
+                }
+            }
+        };
+        
+        // Open modal when view project button is clicked
+        document.querySelectorAll('.view-project').forEach(button => {
+            button.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-project');
+                const project = projectDetails[projectId][currentLang];
+                
+                modalImage.src = project.image;
+                modalTitle.textContent = project.title;
+                modalDescription.innerHTML = `<p>${project.description}</p>`;
+                modalInfo.innerHTML = project.info;
+                
+                modal.style.display = 'block';
+            });
+        });
+        
+        // Close modal when close button is clicked
+        document.querySelector('.close').addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside of modal content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would normally send the form data to a server
+            // For this example, we'll just show an alert
+            const successMessage = currentLang === 'ar' 
+                ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.' 
+                : 'Your message has been sent successfully! We will contact you soon.';
+            
+            alert(successMessage);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
