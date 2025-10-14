@@ -14,6 +14,7 @@
             --light-color: #ecf0f1;
             --dark-color: #2c3e50;
             --text-color: #333;
+            --light-text: #f8f9fa;
             --transition: all 0.3s ease;
         }
         
@@ -62,7 +63,7 @@
         /* Header Styles */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            color: var(--light-text);
             padding: 100px 0;
             position: relative;
             overflow: hidden;
@@ -96,12 +97,14 @@
             margin-bottom: 10px;
             font-weight: 700;
             line-height: 1.2;
+            color: var(--light-text);
         }
         
         .header-text p {
             font-size: 1.2rem;
             margin-bottom: 20px;
             opacity: 0.9;
+            color: var(--light-text);
         }
         
         .header-visual {
@@ -294,6 +297,7 @@
             margin-bottom: 20px;
             font-size: 1.1rem;
             line-height: 1.8;
+            color: #444; /* تحسين لون النص */
         }
         
         .about-visual {
@@ -409,6 +413,7 @@
         
         .edu-card p {
             margin-bottom: 10px;
+            color: #555; /* تحسين لون النص */
         }
         
         .edu-card .year {
@@ -695,6 +700,7 @@
             display: block;
             margin-bottom: 5px;
             font-weight: 500;
+            color: #555; /* تحسين لون النص */
         }
         
         .form-group input,
@@ -1057,6 +1063,7 @@
         .modal-details p {
             margin-bottom: 15px;
             line-height: 1.6;
+            color: #555; /* تحسين لون النص */
         }
         
         .modal-details .project-info {
@@ -1210,12 +1217,6 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 data-ar="تحليل المباني" data-en="Building Analysis">تحليل المباني</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
                         <i class="fas fa-search-dollar"></i>
                     </div>
                     <h3 data-ar="دراسات الجدوى" data-en="Feasibility Studies">دراسات الجدوى</h3>
@@ -1225,12 +1226,6 @@
                         <i class="fas fa-couch"></i>
                     </div>
                     <h3 data-ar="التصميم الداخلي" data-en="Interior Design">التصميم الداخلي</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <h3 data-ar="تصميم المناظر الطبيعية" data-en="Landscape Design">تصميم المناظر الطبيعية</h3>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -1273,8 +1268,8 @@
                         <img src="https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551" alt="Silver Plaza - Commercial Mall">
                     </div>
                     <div class="portfolio-content">
-                        <h3 data-ar="سيلفر بلازا - مركز تجاري، الخرطوم" data-en="Silver Plaza - Commercial Mall, Khartoum">سيلفر بلازا - مركز تجاري، الخرطوم</h3>
-                        <p data-ar="مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة" data-en="A contemporary commercial hub designed to merge retail, leisure, and community spaces into one vibrant destination">مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة</p>
+                        <h3 data-ar="سيلفر بلازا - مجمع تجاري، الخرطوم" data-en="Silver Plaza - Commercial Complex, Khartoum">سيلفر بلازا - مجمع تجاري، الخرطوم</h3>
+                        <p data-ar="مجمع تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة" data-en="A contemporary commercial complex designed to merge retail, leisure, and community spaces into one vibrant destination">مجمع تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة</p>
                         <span class="project-year">2021</span>
                         <button class="view-project btn" data-project="silver-plaza" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
                     </div>
@@ -1561,8 +1556,8 @@
             },
             'silver-plaza': {
                 'ar': {
-                    title: 'سيلفر بلازا - مركز تجاري، الخرطوم',
-                    description: 'مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة. تم تصميم سيلفر بلازا ليكون معلمًا تجاريًا حديثًا في الخرطوم، ويقدم مزيجًا ديناميكيًا من التجزئة وتناول الطعام والمرافق الترفيهية.',
+                    title: 'سيلفر بلازا - مجمع تجاري، الخرطوم',
+                    description: 'مجمع تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة. تم تصميم سيلفر بلازا ليكون معلمًا تجاريًا حديثًا في الخرطوم، ويقدم مزيجًا ديناميكيًا من التجزئة وتناول الطعام والمرافق الترفيهية.',
                     info: `
                         <div class="project-info"><strong>المساحة الإجمالية:</strong> 45,000 م²</div>
                         <div class="project-info"><strong>المساحة المبنية:</strong> 30,000 م²</div>
@@ -1574,8 +1569,8 @@
                     image: 'https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551'
                 },
                 'en': {
-                    title: 'Silver Plaza - Commercial Mall, Khartoum',
-                    description: 'A contemporary commercial hub designed to merge retail, leisure, and community spaces into one vibrant destination. Silver Plaza is envisioned as a modern commercial landmark in Khartoum, offering a dynamic mix of retail, dining, and entertainment facilities.',
+                    title: 'Silver Plaza - Commercial Complex, Khartoum',
+                    description: 'A contemporary commercial complex designed to merge retail, leisure, and community spaces into one vibrant destination. Silver Plaza is envisioned as a modern commercial landmark in Khartoum, offering a dynamic mix of retail, dining, and entertainment facilities.',
                     info: `
                         <div class="project-info"><strong>Site Area:</strong> 45,000 m²</div>
                         <div class="project-info"><strong>Built-up Area:</strong> 30,000 m²</div>
