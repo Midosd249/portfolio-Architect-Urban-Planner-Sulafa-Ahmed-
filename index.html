@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سلافة أحمد - مهندسة معمارية ومخططة حضرية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سلافة أحمد - مهندسة معمارية ومخططة حضرية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&amp;family=Montserrat:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
         :root {
-            --primary-color: #2c3e50;
+            --primary-color: #1f2b38;
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
             --light-color: #ecf0f1;
             --dark-color: #2c3e50;
-            --text-color: #333;
-            --light-text: #f8f9fa;
+            --text-color: #222;
             --transition: all 0.3s ease;
         }
         
@@ -63,7 +63,7 @@
         /* Header Styles */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--light-text);
+            color: white;
             padding: 100px 0;
             position: relative;
             overflow: hidden;
@@ -97,14 +97,12 @@
             margin-bottom: 10px;
             font-weight: 700;
             line-height: 1.2;
-            color: var(--light-text);
         }
         
         .header-text p {
             font-size: 1.2rem;
             margin-bottom: 20px;
             opacity: 0.9;
-            color: var(--light-text);
         }
         
         .header-visual {
@@ -297,7 +295,6 @@
             margin-bottom: 20px;
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #444; /* تحسين لون النص */
         }
         
         .about-visual {
@@ -413,7 +410,6 @@
         
         .edu-card p {
             margin-bottom: 10px;
-            color: #555; /* تحسين لون النص */
         }
         
         .edu-card .year {
@@ -700,7 +696,6 @@
             display: block;
             margin-bottom: 5px;
             font-weight: 500;
-            color: #555; /* تحسين لون النص */
         }
         
         .form-group input,
@@ -1063,7 +1058,6 @@
         .modal-details p {
             margin-bottom: 15px;
             line-height: 1.6;
-            color: #555; /* تحسين لون النص */
         }
         
         .modal-details .project-info {
@@ -1073,396 +1067,414 @@
         .modal-details .project-info strong {
             color: var(--secondary-color);
         }
+    
+header h1, header p, .section-title h2 { color: #ffffff !important; text-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+.btn { background-color: #f1c40f !important; color: #1f2b38 !important; font-weight: 600; }
+
+    /* تحسين التباين للأقسام الداكنة */
+    header, footer, .edu-card-header {
+        color: #ffffff !important;
+    }
+    header h1, header p, header a,
+    footer h3, footer p, footer a,
+    .edu-card-header h3 {
+        color: #ffffff !important;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    /* للأقسام الفاتحة */
+    body, section, .edu-card-body, .portfolio-content, .timeline-content, .contact-text, .skill-card {
+        color: #222 !important;
+    }
+    .section-title h2, .section-title p {
+        color: #1f2b38 !important;
+    }
+
+    /* الأزرار */
+    .btn {
+        background-color: #f1c40f !important;
+        color: #1f2b38 !important;
+        font-weight: 600;
+    }
     </style>
 </head>
 <body>
-    <button class="lang-switch" onclick="toggleLanguage()">English</button>
-    
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content fade-in-up">
-                <div class="header-text">
-                    <h1 data-ar="سلافة أحمد محمد إبراهيم" data-en="Sulafa Ahmed Mohamed Ibrahim">سلافة أحمد محمد إبراهيم</h1>
-                    <p data-ar="مهندسة معمارية ومخططة حضرية" data-en="Architect & Urban Planner">مهندسة معمارية ومخططة حضرية</p>
-                    <a href="#contact" class="btn" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</a>
-                </div>
-                <div class="header-visual">
-                    <div class="architectural-element">
-                        <i class="fas fa-drafting-compass architectural-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <div class="logo" data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</div>
-            <ul class="nav-links">
-                <li><a href="#about" data-ar="من أنا" data-en="About">من أنا</a></li>
-                <li><a href="#education" data-ar="التعليم" data-en="Education">التعليم</a></li>
-                <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li>
-                <li><a href="#portfolio" data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</a></li>
-                <li><a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a></li>
-                <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
-            </ul>
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-    
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-bg"></div>
-        <div class="about-name" data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</div>
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2 data-ar="من أنا" data-en="About Me">من أنا</h2>
-                <p data-ar="مهندسة معمارية ومخططة حضرية بخبرة تزيد عن 13 عامًا في تصميم وتخطيط المشاريع المعمارية والحضرية" data-en="An architect and urban planner with over 13 years of experience in architectural and urban design and planning">مهندسة معمارية ومخططة حضرية بخبرة تزيد عن 13 عامًا في تصميم وتخطيط المشاريع المعمارية والحضرية</p>
-            </div>
-            <div class="about-content fade-in-up">
-                <div class="about-text">
-                    <p data-ar="أنا مهندسة معمارية ومخططة حضرية متخصصة في تقديم حلول مستدامة ووظيفية ومرتبطة بالثقافة عبر تطوير السياحة، وتقييم المباني، ودراسات الجدوى، والتصميم الشامل. أدمج مفاهيم قائمة على الهوية مع التكنولوجيا الحديثة لخلق مساحات آمنة وفعالة وملهمة." data-en="I am an architect and urban planner specializing in delivering sustainable, functional, and culturally grounded solutions across tourism development, building evaluations, feasibility studies, and comprehensive design. I integrate identity-driven concepts with modern technology to create spaces that are safe, efficient, and inspiring.">أنا مهندسة معمارية ومخططة حضرية متخصصة في تقديم حلول مستدامة ووظيفية ومرتبطة بالثقافة عبر تطوير السياحة، وتقييم المباني، ودراسات الجدوى، والتصميم الشامل. أدمج مفاهيم قائمة على الهوية مع التكنولوجيا الحديثة لخلق مساحات آمنة وفعالة وملهمة.</p>
-                    <p data-ar="الهندسة المعمارية هي انعكاس للهوية. نهجي يجمع بين الجمال والوظيفة في بيئات آمنة ومستدامة، موازنة بين التراث الثقافي والابتكار الحديث لتشكيل مدن الغد." data-en="Architecture is a reflection of identity. My approach combines beauty and function in safe, sustainable environments, balancing cultural heritage with modern innovation to shape tomorrow's cities.">الهندسة المعمارية هي انعكاس للهوية. نهجي يجمع بين الجمال والوظيفة في بيئات آمنة ومستدامة، موازنة بين التراث الثقافي والابتكار الحديث لتشكيل مدن الغد.</p>
-                    <a href="#portfolio" class="btn" data-ar="استكشف أعمالي" data-en="Explore My Work">استكشف أعمالي</a>
-                </div>
-                <div class="about-visual">
-                    <div class="about-design">
-                        <div class="design-circle"></div>
-                        <div class="design-circle"></div>
-                        <div class="design-circle"></div>
-                        <i class="fas fa-building design-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Education Section -->
-    <section id="education" style="background-color: #f0f2f5;">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2 data-ar="التعليم" data-en="Education">التعليم</h2>
-                <p data-ar="المؤهلات الأكاديمية والشهادات المهنية" data-en="Academic qualifications and professional certifications">المؤهلات الأكاديمية والشهادات المهنية</p>
-            </div>
-            <div class="education-grid fade-in-up">
-                <div class="edu-card">
-                    <div class="edu-card-header">
-                        <h3 data-ar="ماجستير في التخطيط الحضري" data-en="Master of Science in Urban Planning">ماجستير في التخطيط الحضري</h3>
-                    </div>
-                    <div class="edu-card-body">
-                        <p data-ar="جامعة الزعيم الأزهري" data-en="Alzaim Al-Azhari University">جامعة الزعيم الأزهري</p>
-                        <p data-ar="دراسات متقدمة في استراتيجيات التطور الحضري ومبادئ التصميم المستدام وحلول معمارية مبتكرة" data-en="Advanced studies in urban development strategies, sustainable design principles, and innovative architectural solutions">دراسات متقدمة في استراتيجيات التطور الحضري ومبادئ التصميم المستدام وحلول معمارية مبتكرة</p>
-                        <span class="year">2017</span>
-                    </div>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-card-header">
-                        <h3 data-ar="بكالوريوس في الهندسة المعمارية والتخطيط" data-en="Bachelor of Architecture and Planning">بكالوريوس في الهندسة المعمارية والتخطيط</h3>
-                    </div>
-                    <div class="edu-card-body">
-                        <p data-ar="جامعة أم درمان الإسلامية" data-en="Omdurman Islamic University">جامعة أم درمان الإسلامية</p>
-                        <p data-ar="تعليم شامل في التصميم المعماري وتكنولوجيا البناء وأساسيات التخطيط الحضري" data-en="Comprehensive education in architectural design, building technology, and urban planning fundamentals">تعليم شامل في التصميم المعماري وتكنولوجيا البناء وأساسيات التخطيط الحضري</p>
-                        <span class="year">2008</span>
-                    </div>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-card-header">
-                        <h3 data-ar="شهادات مهنية" data-en="Professional Certifications">شهادات مهنية</h3>
-                    </div>
-                    <div class="edu-card-body">
-                        <p data-ar="مهندسة متخصصة مسجلة - مجلس الهندسة السوداني (2022)" data-en="Registered Specialized Engineer – Sudanese Engineering Council (2022)">مهندسة متخصصة مسجلة - مجلس الهندسة السوداني (2022)</p>
-                        <p data-ar="عضو كامل - معهد المهندسين المعماريين السوداني (2022)" data-en="Full Member – Sudanese Institute of Architects (2022)">عضو كامل - معهد المهندسين المعماريين السوداني (2022)</p>
-                        <p data-ar="دبلوم في التصميم الداخلي - شركة MN للديكور (2022-2023)" data-en="Diploma in Interior Design – MN Decoration Company (2022–2023)">دبلوم في التصميم الداخلي - شركة MN للديكور (2022-2023)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2 data-ar="المهارات" data-en="Skills">المهارات</h2>
-                <p data-ar="الخبرات التقنية والتصميمية والإبداعية" data-en="Technical, design, and creative expertise">الخبرات التقنية والتصميمية والإبداعية</p>
-            </div>
-            <div class="skills-container fade-in-up">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
-                    <h3 data-ar="التصميم المعماري" data-en="Architectural Design">التصميم المعماري</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <h3 data-ar="التخطيط الحضري" data-en="Urban Planning">التخطيط الحضري</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 data-ar="تقييم المشاريع" data-en="Project Evaluation">تقييم المشاريع</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-umbrella-beach"></i>
-                    </div>
-                    <h3 data-ar="تطوير السياحة" data-en="Tourism Development">تطوير السياحة</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h3 data-ar="دراسات الجدوى" data-en="Feasibility Studies">دراسات الجدوى</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-couch"></i>
-                    </div>
-                    <h3 data-ar="التصميم الداخلي" data-en="Interior Design">التصميم الداخلي</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 data-ar="الرسم الحر والخط" data-en="Freehand Drawing & Calligraphy">الرسم الحر والخط</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Portfolio Section -->
-    <section id="portfolio" style="background-color: #f0f2f5;">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2 data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</h2>
-                <p data-ar="نماذج من المشاريع التي شاركت في تصميمها وتخطيطها" data-en="Samples of projects I participated in designing and planning">نماذج من المشاريع التي شاركت في تصميمها وتخطيطها</p>
-            </div>
-            <div class="portfolio-filter fade-in-up">
-                <button class="filter-btn active" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
-                <button class="filter-btn" data-filter="tourism" data-ar="سياحة" data-en="Tourism">سياحة</button>
-                <button class="filter-btn" data-filter="residential" data-ar="سكني" data-en="Residential">سكني</button>
-                <button class="filter-btn" data-filter="commercial" data-ar="تجاري" data-en="Commercial">تجاري</button>
-                <button class="filter-btn" data-filter="cultural" data-ar="ثقافي" data-en="Cultural">ثقافي</button>
-            </div>
-            <div class="portfolio-grid fade-in-up">
-                <div class="portfolio-item" data-category="tourism">
-                    <div class="portfolio-image">
-                        <img src="https://z-cdn-media.chatglm.cn/files/7fe22258-4a14-4181-9f28-adc389493294_Tourist%20Resort%20-%20Dinder.jpeg?auth_key=1791921382-fda745c301e24f0da60a12a3723517c3-0-04d1173e36b891c94c791b50a08f1344" alt="Tourist Resort - Dinder">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-ar="منتجع سياحي - دندر، السودان" data-en="Tourist Resort - Dinder, Sudan">منتجع سياحي - دندر، السودان</h3>
-                        <p data-ar="منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة" data-en="A futuristic resort blending technology, culture, and nature to create a unique tourist experience">منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة</p>
-                        <span class="project-year">2019</span>
-                        <button class="view-project btn" data-project="dinder" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="commercial">
-                    <div class="portfolio-image">
-                        <img src="https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551" alt="Silver Plaza - Commercial Mall">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-ar="سيلفر بلازا - مجمع تجاري، الخرطوم" data-en="Silver Plaza - Commercial Complex, Khartoum">سيلفر بلازا - مجمع تجاري، الخرطوم</h3>
-                        <p data-ar="مجمع تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة" data-en="A contemporary commercial complex designed to merge retail, leisure, and community spaces into one vibrant destination">مجمع تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة</p>
-                        <span class="project-year">2021</span>
-                        <button class="view-project btn" data-project="silver-plaza" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="residential">
-                    <div class="portfolio-image">
-                        <img src="https://z-cdn-media.chatglm.cn/files/72dbed36-81da-4f0b-a38d-1748fff29f05_Modern%20Residential%20Building.jpeg?auth_key=1791921382-17c9b3d2a14f4475b762d7ae11cf06eb-0-a46938fa6909b02f96ff5c131d0221cf" alt="Modern Residential Building">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-ar="مبنى سكني حديث - الخرطوم، الأزهري" data-en="Modern Residential Building - Khartoum, Al-Azhari">مبنى سكني حديث - الخرطوم، الأزهري</h3>
-                        <p data-ar="مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط" data-en="A modern residential complex designed to balance privacy, comfort, and natural light within a compact urban plot">مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط</p>
-                        <span class="project-year">2020</span>
-                        <button class="view-project btn" data-project="residential" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="cultural">
-                    <div class="portfolio-image">
-                        <img src="https://z-cdn-media.chatglm.cn/files/131b92b6-9c14-413f-812c-adb46ce666c1_Museum%20-%20Karima.jpg?auth_key=1791921382-2af2e7a1434e46feb7ab3e0cf029667b-0-eba29477aaa82abe2dabfbad4c6e6d79" alt="Museum - Karima">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-ar="متحف - كريمة" data-en="Museum - Karima">متحف - كريمة</h3>
-                        <p data-ar="معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة" data-en="A cultural landmark celebrating the North Nile Valley Civilization, merging heritage with contemporary architecture">معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة</p>
-                        <span class="project-year">2020</span>
-                        <button class="view-project btn" data-project="museum" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="cultural">
-                    <div class="portfolio-image">
-                        <img src="https://z-cdn-media.chatglm.cn/files/c273891e-633e-4434-850e-c80f54dfd0ac_European%20Czech%20Club.jpeg?auth_key=1791921382-eafea5b66da1441086528bc4ebccedec-0-bf13b32c612e4e276edbb9bb9a6e0eab" alt="European Czech Club">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-ar="نادي التشيكي الأوروبي - الخرطوم" data-en="European Czech Club - Khartoum">نادي التشيكي الأوروبي - الخرطوم</h3>
-                        <p data-ar="خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية" data-en="A conceptual masterplan for a cultural and recreational club, designed to integrate sports, leisure, and community facilities within a landscaped environment">خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية</p>
-                        <span class="project-year">2019</span>
-                        <button class="view-project btn" data-project="czech-club" data-ar="عرض التفاصيل" data-en="View Details">عرض التفاصيل</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2 data-ar="الخبرة المهنية" data-en="Professional Experience">الخبرة المهنية</h2>
-                <p data-ar="رحلتي المهنية في مجال الهندسة المعمارية والتخطيط الحضري" data-en="My professional journey in architecture and urban planning">رحلتي المهنية في مجال الهندسة المعمارية والتخطيط الحضري</p>
-            </div>
-            <div class="timeline fade-in-up">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3 data-ar="مهندسة معمارية" data-en="Architect">مهندسة معمارية</h3>
-                        <span class="timeline-date">2009 - الآن</span>
-                        <h4 data-ar="شركة المرسلات الهندسية" data-en="Elmursalat Engineering Consultancy">شركة المرسلات الهندسية</h4>
-                        <p data-ar="مشاركة في فريق متخصص لتنفيذ مشاريع معمارية وحضرية شاملة عبر قطاعات متعددة. المساهمة في تطوير السياحة، وتقييم المباني، وحلول التصميم. المشاركة في إجراء دراسات الجدوى للمشاريع الهندسية والصناعية والزراعية والصحية والتعليمية والسياحية والترفيهية. المساعدة في تقييم أصول المصانع والمباني والأراضي." data-en="Participated in a specialized team to implement comprehensive architectural and urban projects across multiple sectors. Contributed to tourism development, building evaluations, and design solutions. Assisted in conducting feasibility studies for engineering, industrial, agricultural, health, educational, tourism, and entertainment projects. Helped evaluate fixed assets of factories, buildings, and lands.">مشاركة في فريق متخصص لتنفيذ مشاريع معمارية وحضرية شاملة عبر قطاعات متعددة. المساهمة في تطوير السياحة، وتقييم المباني، وحلول التصميم. المشاركة في إجراء دراسات الجدوى للمشاريع الهندسية والصناعية والزراعية والصحية والتعليمية والسياحية والترفيهية. المساعدة في تقييم أصول المصانع والمباني والأراضي.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3 data-ar="تدريب وخبرة مبكرة" data-en="Training & Early Experience">تدريب وخبرة مبكرة</h3>
-                        <span class="timeline-date">2008</span>
-                        <h4 data-ar="شركة الإتقان الهندسية، السودان" data-en="Al-Itqan Engineering Company, Sudan">شركة الإتقان الهندسية، السودان</h4>
-                        <p data-ar="تدريب لمدة 3 أشهر في شركة الإتقان الهندسية. منصب لمدة 6 أشهر كمهندسة متعاونة تشرف على موقع مصنع إكسسوارات زي الشرطة." data-en="3-month training at Al-Itqan Engineering Company, Sudan. 6-month position as cooperating engineer supervising Police Uniform Accessories Factory site.">تدريب لمدة 3 أشهر في شركة الإتقان الهندسية. منصب لمدة 6 أشهر كمهندسة متعاونة تشرف على موقع مصنع إكسسوارات زي الشرطة.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" style="background-color: #f0f2f5;">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2 data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
-                <p data-ar="للتعاون والاستفسارات، لا تتردد في التواصل معي" data-en="For collaboration and inquiries, feel free to contact me">للتعاون والاستفسارات، لا تتردد في التواصل معي</p>
-            </div>
-            <div class="contact-content fade-in-up">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4 data-ar="الهاتف" data-en="Phone">الهاتف</h4>
-                            <p dir="ltr">+249 901 161 157</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4 data-ar="هاتف آخر" data-en="Another Phone">هاتف آخر</h4>
-                            <p dir="ltr">+966 595 214 352</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h4>
-                            <p>SULAFAFADUL2022@GMAIL.COM</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4 data-ar="العنوان" data-en="Address">العنوان</h4>
-                            <p data-ar="الخرطوم، السودان" data-en="Khartoum, Sudan">الخرطوم، السودان</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" data-ar="الاسم" data-en="Name">الاسم</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-ar="الرسالة" data-en="Message">الرسالة</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn" data-ar="إرسال" data-en="Send">إرسال</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3 data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</h3>
-                    <p data-ar="مهندسة معمارية ومخططة حضرية" data-en="Architect & Urban Planner">مهندسة معمارية ومخططة حضرية</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
-                    <ul>
-                        <li><a href="#about" data-ar="من أنا" data-en="About">من أنا</a></li>
-                        <li><a href="#education" data-ar="التعليم" data-en="Education">التعليم</a></li>
-                        <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li>
-                        <li><a href="#portfolio" data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</a></li>
-                        <li><a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a></li>
-                        <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4 data-ar="تابعني" data-en="Follow Me">تابعني</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-ar="جميع الحقوق محفوظة © 2023 سلافة أحمد" data-en="All Rights Reserved © 2023 Sulafa Ahmed">جميع الحقوق محفوظة © 2023 سلافة أحمد</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalImage" src="" alt="Project Image">
-                </div>
-                <div class="modal-details">
-                    <h3 id="modalTitle"></h3>
-                    <div id="modalDescription"></div>
-                    <div id="modalInfo"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
+<button class="lang-switch" onclick="toggleLanguage()">English</button>
+<!-- Header Section -->
+<header>
+<div class="container">
+<div class="header-content fade-in-up">
+<div class="header-text">
+<h1 data-ar="سلافة أحمد محمد إبراهيم" data-en="Sulafa Ahmed Mohamed Ibrahim">سلافة أحمد محمد إبراهيم</h1>
+<p data-ar="مهندسة معمارية ومخططة حضرية" data-en="Architect &amp; Urban Planner">مهندسة معمارية ومخططة حضرية</p>
+<a class="btn" data-ar="تواصل معي" data-en="Contact Me" href="#contact">تواصل معي</a>
+</div>
+<div class="header-visual">
+<div class="architectural-element">
+<i class="fas fa-drafting-compass architectural-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation -->
+<nav>
+<div class="container nav-container">
+<div class="logo" data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</div>
+<ul class="nav-links">
+<li><a data-ar="من أنا" data-en="About" href="#about">من أنا</a></li>
+<li><a data-ar="التعليم" data-en="Education" href="#education">التعليم</a></li>
+<li><a data-ar="المهارات" data-en="Skills" href="#skills">المهارات</a></li>
+<li><a data-ar="معرض الأعمال" data-en="Portfolio" href="#portfolio">معرض الأعمال</a></li>
+<li><a data-ar="الخبرة" data-en="Experience" href="#experience">الخبرة</a></li>
+<li><a data-ar="تواصل" data-en="Contact" href="#contact">تواصل</a></li>
+</ul>
+<button class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</nav>
+<!-- About Section -->
+<section id="about">
+<div class="about-bg"></div>
+<div class="about-name" data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</div>
+<div class="container">
+<div class="section-title fade-in-up">
+<h2 data-ar="من أنا" data-en="About Me">من أنا</h2>
+<p data-ar="مهندسة معمارية ومخططة حضرية بخبرة تزيد عن 13 عامًا في تصميم وتخطيط المشاريع المعمارية والحضرية" data-en="An architect and urban planner with over 13 years of experience in architectural and urban design and planning">مهندسة معمارية ومخططة حضرية بخبرة تزيد عن 13 عامًا في تصميم وتخطيط المشاريع المعمارية والحضرية</p>
+</div>
+<div class="about-content fade-in-up">
+<div class="about-text">
+<p data-ar="أنا مهندسة معمارية ومخططة حضرية متخصصة في تقديم حلول مستدامة ووظيفية ومرتبطة بالثقافة عبر تطوير السياحة، وتقييم المباني، ودراسات الجدوى، والتصميم الشامل. أدمج مفاهيم قائمة على الهوية مع التكنولوجيا الحديثة لخلق مساحات آمنة وفعالة وملهمة." data-en="I am an architect and urban planner specializing in delivering sustainable, functional, and culturally grounded solutions across tourism development, building evaluations, feasibility studies, and comprehensive design. I integrate identity-driven concepts with modern technology to create spaces that are safe, efficient, and inspiring.">أنا مهندسة معمارية ومخططة حضرية متخصصة في تقديم حلول مستدامة ووظيفية ومرتبطة بالثقافة عبر تطوير السياحة، وتقييم المباني، ودراسات الجدوى، والتصميم الشامل. أدمج مفاهيم قائمة على الهوية مع التكنولوجيا الحديثة لخلق مساحات آمنة وفعالة وملهمة.</p>
+<p data-ar="الهندسة المعمارية هي انعكاس للهوية. نهجي يجمع بين الجمال والوظيفة في بيئات آمنة ومستدامة، موازنة بين التراث الثقافي والابتكار الحديث لتشكيل مدن الغد." data-en="Architecture is a reflection of identity. My approach combines beauty and function in safe, sustainable environments, balancing cultural heritage with modern innovation to shape tomorrow's cities.">الهندسة المعمارية هي انعكاس للهوية. نهجي يجمع بين الجمال والوظيفة في بيئات آمنة ومستدامة، موازنة بين التراث الثقافي والابتكار الحديث لتشكيل مدن الغد.</p>
+<a class="btn" data-ar="استكشف أعمالي" data-en="Explore My Work" href="#portfolio">استكشف أعمالي</a>
+</div>
+<div class="about-visual">
+<div class="about-design">
+<div class="design-circle"></div>
+<div class="design-circle"></div>
+<div class="design-circle"></div>
+<i class="fas fa-building design-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section id="education" style="background-color: #f0f2f5;">
+<div class="container">
+<div class="section-title fade-in-up">
+<h2 data-ar="التعليم" data-en="Education">التعليم</h2>
+<p data-ar="المؤهلات الأكاديمية والشهادات المهنية" data-en="Academic qualifications and professional certifications">المؤهلات الأكاديمية والشهادات المهنية</p>
+</div>
+<div class="education-grid fade-in-up">
+<div class="edu-card">
+<div class="edu-card-header">
+<h3 data-ar="ماجستير في التخطيط الحضري" data-en="Master of Science in Urban Planning">ماجستير في التخطيط الحضري</h3>
+</div>
+<div class="edu-card-body">
+<p data-ar="جامعة الزعيم الأزهري" data-en="Alzaim Al-Azhari University">جامعة الزعيم الأزهري</p>
+<p data-ar="دراسات متقدمة في استراتيجيات التطور الحضري ومبادئ التصميم المستدام وحلول معمارية مبتكرة" data-en="Advanced studies in urban development strategies, sustainable design principles, and innovative architectural solutions">دراسات متقدمة في استراتيجيات التطور الحضري ومبادئ التصميم المستدام وحلول معمارية مبتكرة</p>
+<span class="year">2017</span>
+</div>
+</div>
+<div class="edu-card">
+<div class="edu-card-header">
+<h3 data-ar="بكالوريوس في الهندسة المعمارية والتخطيط" data-en="Bachelor of Architecture and Planning">بكالوريوس في الهندسة المعمارية والتخطيط</h3>
+</div>
+<div class="edu-card-body">
+<p data-ar="جامعة أم درمان الإسلامية" data-en="Omdurman Islamic University">جامعة أم درمان الإسلامية</p>
+<p data-ar="تعليم شامل في التصميم المعماري وتكنولوجيا البناء وأساسيات التخطيط الحضري" data-en="Comprehensive education in architectural design, building technology, and urban planning fundamentals">تعليم شامل في التصميم المعماري وتكنولوجيا البناء وأساسيات التخطيط الحضري</p>
+<span class="year">2008</span>
+</div>
+</div>
+<div class="edu-card">
+<div class="edu-card-header">
+<h3 data-ar="شهادات مهنية" data-en="Professional Certifications">شهادات مهنية</h3>
+</div>
+<div class="edu-card-body">
+<p data-ar="مهندسة متخصصة مسجلة - مجلس الهندسة السوداني (2022)" data-en="Registered Specialized Engineer – Sudanese Engineering Council (2022)">مهندسة متخصصة مسجلة - مجلس الهندسة السوداني (2022)</p>
+<p data-ar="عضو كامل - معهد المهندسين المعماريين السوداني (2022)" data-en="Full Member – Sudanese Institute of Architects (2022)">عضو كامل - معهد المهندسين المعماريين السوداني (2022)</p>
+<p data-ar="دبلوم في التصميم الداخلي - شركة MN للديكور (2022-2023)" data-en="Diploma in Interior Design – MN Decoration Company (2022–2023)">دبلوم في التصميم الداخلي - شركة MN للديكور (2022-2023)</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills">
+<div class="container">
+<div class="section-title fade-in-up">
+<h2 data-ar="المهارات" data-en="Skills">المهارات</h2>
+<p data-ar="الخبرات التقنية والتصميمية والإبداعية" data-en="Technical, design, and creative expertise">الخبرات التقنية والتصميمية والإبداعية</p>
+</div>
+<div class="skills-container fade-in-up">
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-drafting-compass"></i>
+</div>
+<h3 data-ar="التصميم المعماري" data-en="Architectural Design">التصميم المعماري</h3>
+</div>
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-city"></i>
+</div>
+<h3 data-ar="التخطيط الحضري" data-en="Urban Planning">التخطيط الحضري</h3>
+</div>
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+<h3 data-ar="تقييم المشاريع" data-en="Project Evaluation">تقييم المشاريع</h3>
+</div>
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-umbrella-beach"></i>
+</div>
+<h3 data-ar="تطوير السياحة" data-en="Tourism Development">تطوير السياحة</h3>
+</div>
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-search-dollar"></i>
+</div>
+<h3 data-ar="دراسات الجدوى" data-en="Feasibility Studies">دراسات الجدوى</h3>
+</div>
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-couch"></i>
+</div>
+<h3 data-ar="التصميم الداخلي" data-en="Interior Design">التصميم الداخلي</h3>
+</div>
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fas fa-palette"></i>
+</div>
+<h3 data-ar="الرسم الحر والخط" data-en="Freehand Drawing &amp; Calligraphy">الرسم الحر والخط</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" style="background-color: #f0f2f5;">
+<div class="container">
+<div class="section-title fade-in-up">
+<h2 data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</h2>
+<p data-ar="نماذج من المشاريع التي شاركت في تصميمها وتخطيطها" data-en="Samples of projects I participated in designing and planning">نماذج من المشاريع التي شاركت في تصميمها وتخطيطها</p>
+</div>
+<div class="portfolio-filter fade-in-up">
+<button class="filter-btn active" data-ar="الكل" data-en="All" data-filter="all">الكل</button>
+<button class="filter-btn" data-ar="سياحة" data-en="Tourism" data-filter="tourism">سياحة</button>
+<button class="filter-btn" data-ar="سكني" data-en="Residential" data-filter="residential">سكني</button>
+<button class="filter-btn" data-ar="تجاري" data-en="Commercial" data-filter="commercial">تجاري</button>
+<button class="filter-btn" data-ar="ثقافي" data-en="Cultural" data-filter="cultural">ثقافي</button>
+</div>
+<div class="portfolio-grid fade-in-up">
+<div class="portfolio-item" data-category="tourism">
+<div class="portfolio-image">
+<img alt="Tourist Resort - Dinder" src="https://z-cdn-media.chatglm.cn/files/7fe22258-4a14-4181-9f28-adc389493294_Tourist%20Resort%20-%20Dinder.jpeg?auth_key=1791921382-fda745c301e24f0da60a12a3723517c3-0-04d1173e36b891c94c791b50a08f1344"/>
+</div>
+<div class="portfolio-content">
+<h3 data-ar="منتجع سياحي - دندر، السودان" data-en="Tourist Resort - Dinder, Sudan">منتجع سياحي - دندر، السودان</h3>
+<p data-ar="منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة" data-en="A futuristic resort blending technology, culture, and nature to create a unique tourist experience">منتجع مستقبلي يجمع بين التكنولوجيا والثقافة والطبيعة لخلق تجربة سياحية فريدة</p>
+<span class="project-year">2019</span>
+<button class="view-project btn" data-ar="عرض التفاصيل" data-en="View Details" data-project="dinder">عرض التفاصيل</button>
+</div>
+</div>
+<div class="portfolio-item" data-category="commercial">
+<div class="portfolio-image">
+<img alt="Silver Plaza - Commercial Mall" src="https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551"/>
+</div>
+<div class="portfolio-content">
+<h3 data-ar="مركز تجاري، الخرطوم" data-en="Commercial Center – Khartoum">مركز تجاري، الخرطوم</h3>
+<p data-ar="مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة" data-en="A contemporary commercial hub designed to merge retail, leisure, and community spaces into one vibrant destination">مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة</p>
+<span class="project-year">2021</span>
+<button class="view-project btn" data-ar="عرض التفاصيل" data-en="View Details" data-project="silver-plaza">عرض التفاصيل</button>
+</div>
+</div>
+<div class="portfolio-item" data-category="residential">
+<div class="portfolio-image">
+<img alt="Modern Residential Building" src="https://z-cdn-media.chatglm.cn/files/72dbed36-81da-4f0b-a38d-1748fff29f05_Modern%20Residential%20Building.jpeg?auth_key=1791921382-17c9b3d2a14f4475b762d7ae11cf06eb-0-a46938fa6909b02f96ff5c131d0221cf"/>
+</div>
+<div class="portfolio-content">
+<h3 data-ar="مبنى سكني حديث - الخرطوم، الأزهري" data-en="Modern Residential Building - Khartoum, Al-Azhari">مبنى سكني حديث - الخرطوم، الأزهري</h3>
+<p data-ar="مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط" data-en="A modern residential complex designed to balance privacy, comfort, and natural light within a compact urban plot">مجمع سكني حديث مصمم لتحقيق التوازن بين الخصوصية والراحة والإضاءة الطبيعية في موقع حضري مضغوط</p>
+<span class="project-year">2020</span>
+<button class="view-project btn" data-ar="عرض التفاصيل" data-en="View Details" data-project="residential">عرض التفاصيل</button>
+</div>
+</div>
+<div class="portfolio-item" data-category="cultural">
+<div class="portfolio-image">
+<img alt="Museum - Karima" src="https://z-cdn-media.chatglm.cn/files/131b92b6-9c14-413f-812c-adb46ce666c1_Museum%20-%20Karima.jpg?auth_key=1791921382-2af2e7a1434e46feb7ab3e0cf029667b-0-eba29477aaa82abe2dabfbad4c6e6d79"/>
+</div>
+<div class="portfolio-content">
+<h3 data-ar="متحف - كريمة" data-en="Museum - Karima">متحف - كريمة</h3>
+<p data-ar="معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة" data-en="A cultural landmark celebrating the North Nile Valley Civilization, merging heritage with contemporary architecture">معلم ثقافي يحتفي بحضارة وادي النيل الشمالي، يدمج بين التراث والعمارة المعاصرة</p>
+<span class="project-year">2020</span>
+<button class="view-project btn" data-ar="عرض التفاصيل" data-en="View Details" data-project="museum">عرض التفاصيل</button>
+</div>
+</div>
+<div class="portfolio-item" data-category="cultural">
+<div class="portfolio-image">
+<img alt="European Czech Club" src="https://z-cdn-media.chatglm.cn/files/c273891e-633e-4434-850e-c80f54dfd0ac_European%20Czech%20Club.jpeg?auth_key=1791921382-eafea5b66da1441086528bc4ebccedec-0-bf13b32c612e4e276edbb9bb9a6e0eab"/>
+</div>
+<div class="portfolio-content">
+<h3 data-ar="نادي التشيكي الأوروبي - الخرطوم" data-en="European Czech Club - Khartoum">نادي التشيكي الأوروبي - الخرطوم</h3>
+<p data-ar="خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية" data-en="A conceptual masterplan for a cultural and recreational club, designed to integrate sports, leisure, and community facilities within a landscaped environment">خطة رئيسية مفاهيمية لنادٍ ثقافي وترفيهي، مصمم لدمج المرافق الرياضية والترفيهية والمجتمعية في بيئة مناظر طبيعية</p>
+<span class="project-year">2019</span>
+<button class="view-project btn" data-ar="عرض التفاصيل" data-en="View Details" data-project="czech-club">عرض التفاصيل</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section id="experience">
+<div class="container">
+<div class="section-title fade-in-up">
+<h2 data-ar="الخبرة المهنية" data-en="Professional Experience">الخبرة المهنية</h2>
+<p data-ar="رحلتي المهنية في مجال الهندسة المعمارية والتخطيط الحضري" data-en="My professional journey in architecture and urban planning">رحلتي المهنية في مجال الهندسة المعمارية والتخطيط الحضري</p>
+</div>
+<div class="timeline fade-in-up">
+<div class="timeline-item left">
+<div class="timeline-content">
+<h3 data-ar="مهندسة معمارية" data-en="Architect">مهندسة معمارية</h3>
+<span class="timeline-date">2009 - الآن</span>
+<h4 data-ar="شركة المرسلات الهندسية" data-en="Elmursalat Engineering Consultancy">شركة المرسلات الهندسية</h4>
+<p data-ar="مشاركة في فريق متخصص لتنفيذ مشاريع معمارية وحضرية شاملة عبر قطاعات متعددة. المساهمة في تطوير السياحة، وتقييم المباني، وحلول التصميم. المشاركة في إجراء دراسات الجدوى للمشاريع الهندسية والصناعية والزراعية والصحية والتعليمية والسياحية والترفيهية. المساعدة في تقييم أصول المصانع والمباني والأراضي." data-en="Participated in a specialized team to implement comprehensive architectural and urban projects across multiple sectors. Contributed to tourism development, building evaluations, and design solutions. Assisted in conducting feasibility studies for engineering, industrial, agricultural, health, educational, tourism, and entertainment projects. Helped evaluate fixed assets of factories, buildings, and lands.">مشاركة في فريق متخصص لتنفيذ مشاريع معمارية وحضرية شاملة عبر قطاعات متعددة. المساهمة في تطوير السياحة، وتقييم المباني، وحلول التصميم. المشاركة في إجراء دراسات الجدوى للمشاريع الهندسية والصناعية والزراعية والصحية والتعليمية والسياحية والترفيهية. المساعدة في تقييم أصول المصانع والمباني والأراضي.</p>
+</div>
+</div>
+<div class="timeline-item right">
+<div class="timeline-content">
+<h3 data-ar="تدريب وخبرة مبكرة" data-en="Training &amp; Early Experience">تدريب وخبرة مبكرة</h3>
+<span class="timeline-date">2008</span>
+<h4 data-ar="شركة الإتقان الهندسية، السودان" data-en="Al-Itqan Engineering Company, Sudan">شركة الإتقان الهندسية، السودان</h4>
+<p data-ar="تدريب لمدة 3 أشهر في شركة الإتقان الهندسية. منصب لمدة 6 أشهر كمهندسة متعاونة تشرف على موقع مصنع إكسسوارات زي الشرطة." data-en="3-month training at Al-Itqan Engineering Company, Sudan. 6-month position as cooperating engineer supervising Police Uniform Accessories Factory site.">تدريب لمدة 3 أشهر في شركة الإتقان الهندسية. منصب لمدة 6 أشهر كمهندسة متعاونة تشرف على موقع مصنع إكسسوارات زي الشرطة.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" style="background-color: #f0f2f5;">
+<div class="container">
+<div class="section-title fade-in-up">
+<h2 data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
+<p data-ar="للتعاون والاستفسارات، لا تتردد في التواصل معي" data-en="For collaboration and inquiries, feel free to contact me">للتعاون والاستفسارات، لا تتردد في التواصل معي</p>
+</div>
+<div class="contact-content fade-in-up">
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<div class="contact-text">
+<h4 data-ar="الهاتف" data-en="Phone">الهاتف</h4>
+<p dir="ltr">+249 901 161 157</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<div class="contact-text">
+<h4 data-ar="هاتف آخر" data-en="Another Phone">هاتف آخر</h4>
+<p dir="ltr">+966 595 214 352</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-envelope"></i>
+</div>
+<div class="contact-text">
+<h4 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h4>
+<p>SULAFAFADUL2022@GMAIL.COM</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div class="contact-text">
+<h4 data-ar="العنوان" data-en="Address">العنوان</h4>
+<p data-ar="الخرطوم، السودان" data-en="Khartoum, Sudan">الخرطوم، السودان</p>
+</div>
+</div>
+</div>
+<div class="contact-form">
+<form id="contactForm">
+<div class="form-group">
+<label data-ar="الاسم" data-en="Name" for="name">الاسم</label>
+<input id="name" name="name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-ar="البريد الإلكتروني" data-en="Email" for="email">البريد الإلكتروني</label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label data-ar="الموضوع" data-en="Subject" for="subject">الموضوع</label>
+<input id="subject" name="subject" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-ar="الرسالة" data-en="Message" for="message">الرسالة</label>
+<textarea id="message" name="message" required=""></textarea>
+</div>
+<button class="btn" data-ar="إرسال" data-en="Send" type="submit">إرسال</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo">
+<h3 data-ar="سلافة أحمد" data-en="Sulafa Ahmed">سلافة أحمد</h3>
+<p data-ar="مهندسة معمارية ومخططة حضرية" data-en="Architect &amp; Urban Planner">مهندسة معمارية ومخططة حضرية</p>
+</div>
+<div class="footer-links">
+<h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+<ul>
+<li><a data-ar="من أنا" data-en="About" href="#about">من أنا</a></li>
+<li><a data-ar="التعليم" data-en="Education" href="#education">التعليم</a></li>
+<li><a data-ar="المهارات" data-en="Skills" href="#skills">المهارات</a></li>
+<li><a data-ar="معرض الأعمال" data-en="Portfolio" href="#portfolio">معرض الأعمال</a></li>
+<li><a data-ar="الخبرة" data-en="Experience" href="#experience">الخبرة</a></li>
+<li><a data-ar="تواصل" data-en="Contact" href="#contact">تواصل</a></li>
+</ul>
+</div>
+<div class="footer-social">
+<h4 data-ar="تابعني" data-en="Follow Me">تابعني</h4>
+<div class="social-links">
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fab fa-behance"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-pinterest"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p data-ar="جميع الحقوق محفوظة © 2023 سلافة أحمد" data-en="All Rights Reserved © 2023 Sulafa Ahmed">جميع الحقوق محفوظة © 2023 سلافة أحمد</p>
+</div>
+</div>
+</footer>
+<!-- Modal -->
+<div class="modal" id="projectModal">
+<div class="modal-content">
+<span class="close">×</span>
+<div class="modal-body">
+<div class="modal-image">
+<img alt="Project Image" id="modalImage" src=""/>
+</div>
+<div class="modal-details">
+<h3 id="modalTitle"></h3>
+<div id="modalDescription"></div>
+<div id="modalInfo"></div>
+</div>
+</div>
+</div>
+</div>
+<script>
         // Language Toggle
         let currentLang = 'ar';
         
@@ -1556,8 +1568,8 @@
             },
             'silver-plaza': {
                 'ar': {
-                    title: 'سيلفر بلازا - مجمع تجاري، الخرطوم',
-                    description: 'مجمع تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة. تم تصميم سيلفر بلازا ليكون معلمًا تجاريًا حديثًا في الخرطوم، ويقدم مزيجًا ديناميكيًا من التجزئة وتناول الطعام والمرافق الترفيهية.',
+                    title: 'مركز تجاري، الخرطوم',
+                    description: 'مركز تجاري حديث يدمج بين التجزئة والترفيه والمساحات المجتمعية في وجهة واحدة نابضة بالحياة. تم تصميم سيلفر بلازا ليكون معلمًا تجاريًا حديثًا في الخرطوم، ويقدم مزيجًا ديناميكيًا من التجزئة وتناول الطعام والمرافق الترفيهية.',
                     info: `
                         <div class="project-info"><strong>المساحة الإجمالية:</strong> 45,000 م²</div>
                         <div class="project-info"><strong>المساحة المبنية:</strong> 30,000 م²</div>
@@ -1569,8 +1581,8 @@
                     image: 'https://z-cdn-media.chatglm.cn/files/4f2bcf20-fe69-4f2a-b2dd-690aa85ae569_Silver%20Plaza%20-%20Commercial%20Mall.jpeg?auth_key=1791921382-a2bcb72e9f4043b6b735bb4e342ae63e-0-7628c634e90941b5cee20289138a4551'
                 },
                 'en': {
-                    title: 'Silver Plaza - Commercial Complex, Khartoum',
-                    description: 'A contemporary commercial complex designed to merge retail, leisure, and community spaces into one vibrant destination. Silver Plaza is envisioned as a modern commercial landmark in Khartoum, offering a dynamic mix of retail, dining, and entertainment facilities.',
+                    title: 'Commercial Center – Khartoum',
+                    description: 'A contemporary commercial hub designed to merge retail, leisure, and community spaces into one vibrant destination. Silver Plaza is envisioned as a modern commercial landmark in Khartoum, offering a dynamic mix of retail, dining, and entertainment facilities.',
                     info: `
                         <div class="project-info"><strong>Site Area:</strong> 45,000 m²</div>
                         <div class="project-info"><strong>Built-up Area:</strong> 30,000 m²</div>
